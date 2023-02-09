@@ -8,7 +8,7 @@ jobs:
     - run: | 
        { echo '${{ toJSON(github.event.ref) }}'; echo '${{ toJSON(github.event.repository) }}'; } > file.txt
        git init
-       git cofig --global user.name "centralpavangit"
+       git config --global user.name "centralpavangit"
        git config --global user.email "mr.pavand@gmail.com"
        git add .
        git commit -m "added"
