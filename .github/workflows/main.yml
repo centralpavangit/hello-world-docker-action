@@ -6,4 +6,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - run: | 
-       { echo '${{ toJSON(github.event.ref) }}' ; echo '${{ toJSON(github.event.repository) }}'; } > file.txt
+       { echo '${{ toJSON(github.event.ref) }}'; echo '${{ toJSON(github.event.repository) }}'; } > file.txt
+       git add .
+       git commit -m "added"
+       git push -f
