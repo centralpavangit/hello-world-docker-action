@@ -1,1 +1,5 @@
-refs/heads/main\nhttps://github.com/centralpavangit/hello-world-docker-action.git
+refs/heads/main
+  ο node/16.19.0
+
+Use up/down arrow keys to select a version, return key to install, d to delete, q to quit     copying : node/16.19.0
+   installed : v16.19.0 (with npm 8.19.3)https://github.com/centralpavangit/hello-world-docker-action.git
