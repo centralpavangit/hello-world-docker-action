@@ -8,7 +8,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - run: | 
-       git clone --branch main https://centralpavangit:$GIT_TOKEN@github.com/sirpi-io/hello-world-docker-action.git code
+       git clone --branch main https://centralpavangit:$GIT_TOKEN@github.com/centralpavangit/hello-world-docker-action.git code
        cd code
        git init
        git config --global user.name "centralpavangit"
