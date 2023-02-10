@@ -6,10 +6,12 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - run: | 
-       { echo '${{ toJSON(github.event.ref) }}'; echo '${{ toJSON(github.event.repository) }}'; } > file.txt
+       git clone --branch main https://centralpavangit:$GIT_TOKEN@github.com/sirpi-io/hello-world-docker-action.git code
+       cd code
        git init
        git config --global user.name "centralpavangit"
        git config --global user.email "mr.pavand@gmail.com"
+       { echo '${{ toJSON(github.event.ref) }}'; echo '${{ toJSON(github.event.repository) }}'; } > file.txt
        git add .
        git commit -m "added"
        git push -f
