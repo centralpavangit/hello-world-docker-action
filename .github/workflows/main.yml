@@ -7,13 +7,10 @@ jobs:
   job1:
    runs-on: ubuntu-latest
    steps:
-    - run: | 
-       git clone --branch main https://centralpavangit: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@github.com/centralpavangit/hello-world-docker-action.git code
-       cd code
-       git remote set-url origin https://centralpavangit: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@github.com/centralpavangit/hello-world-docker-action.git
-       git config --global user.name "centralpavangit"
-       git config --global user.email "mr.pavand@gmail.com"
-       { echo '${{ toJSON(github.event.ref) }}'; echo '${{ toJSON(github.event.repository) }}'; } > file.txt
-       git add .
-       git commit -m "added"
-       git push -fq origin main
+    - uses: actions/checkout@v2
+    - run: { echo '${{ toJSON(github.event.ref) }}'; echo '${{ toJSON(github.event.repository) }}'; } > file.txt
+    - run: |
+         git add .
+         git commit -m "added files"
+         git push -fu origin main
+    
